@@ -1,0 +1,15 @@
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\bin\Debug\netstandard2.0\Manager-app.deps.json
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\bin\Debug\netstandard2.0\Manager-app.dll
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\bin\Debug\netstandard2.0\ref\Manager-app.dll
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\bin\Debug\netstandard2.0\Manager-app.pdb
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.csproj.AssemblyReference.cache
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.AssemblyInfoInputs.cache
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.AssemblyInfo.cs
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.csproj.CoreCompileInputs.cache
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.dll
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\refint\Manager-app.dll
+C:\Users\zsoml\Desktop\LIGTHNING_MANAGER\Manager-app\Manager-app\obj\Debug\netstandard2.0\Manager-app.pdb
