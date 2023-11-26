@@ -12,6 +12,10 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -19,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <Frame Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="LED" HorizontalTextAlignment="Start" TextColor="White" FontSize="28" FontAttributes="Bold"/>
+            <Label Text="ESP" HorizontalTextAlignment="Start" TextColor="White" FontSize="28" FontAttributes="Bold"/>
         </Frame>
 
         <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" x:Name="Ip_Label"></Label>
@@ -54,6 +58,38 @@
             Text="Sync"
             x:Name="BUTTON_SYNC"
             Clicked="SyncButtonClick">
+        </Button>
+
+        <Label x:Name="Temperature"  Margin="10,80,10,0" Grid.Row="4" Grid.Column="0" HorizontalOptions="Center">? °C</Label>
+        <Label x:Name="Humidity" Margin="10,80,10,0" Grid.Row="4" Grid.Column="1" HorizontalOptions="Center">? %</Label>
+        
+        <Button
+            Margin="10,10,10,5"
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="TEMP"
+            x:Name="BUTTON_TEMP"
+            Clicked="TempButtonClick">
+        </Button>
+        <Button
+            Margin="10,10,10,5"
+            Grid.Row="5"
+            Grid.Column="1"
+            Text="HUMIDITY"
+            x:Name="BUTTON_HUMIDITY"
+            Clicked="HumidityButtonClick">
+        </Button>
+        <Label Margin="10,10,10,0" Grid.Row="6" Grid.Column="0" HorizontalOptions="End">Státusz:</Label>
+        <Label x:Name="S_Status" Margin="10,10,10,0" Grid.Row="6" Grid.Column="1" HorizontalOptions="Start">?</Label>
+
+        <Button
+            Margin="10,10,10,10"
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Text="SYNC"
+            x:Name="BUTTON_SENSOR_SYNC"
+            Clicked="SensorSyncButtonClick">
         </Button>
 
     </Grid>

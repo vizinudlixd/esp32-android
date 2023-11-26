@@ -22,6 +22,10 @@ namespace Manager_app
 
             SetStatus("sync", true);
 
+            SetSensorStatus("syncsensor", true, 2);
+            SetSensorStatus("temp", false, 1);
+            SetSensorStatus("humidity", false, 0);
+
             new Thread(() =>
             {
                 Thread.CurrentThread.IsBackground = true;
@@ -66,6 +70,58 @@ namespace Manager_app
                 L_Status.Text = result[1];
             }
             else L_Status.Text = "SetStatus() error";
+        }
+
+
+
+        private async void TempButtonClick(object sender, EventArgs e)
+        {
+            SetSensorStatus("tempon", false, 1);
+            SetSensorStatus("temp", false, 1);
+            SetSensorStatus("syncsensor", true, 2);
+        }
+        private async void HumidityButtonClick(object sender, EventArgs e)
+        {
+            SetSensorStatus("humidityon", false, 0);
+            SetSensorStatus("humidity", false, 0);
+            SetSensorStatus("syncsensor", true, 2);
+        }
+        private async void SensorSyncButtonClick(object sender, EventArgs e) => SetSensorStatus("syncsensor", true, 2);
+
+
+        private async void SetSensorStatus(string endpoint, bool isSync, int sensor)
+        {
+            S_Status.Text = "...";
+
+            string r = await requests.SendSensorRequestAsync(endpoint, isSync, sensor);
+            string[] result = r.Split(' ');
+
+            if (result[0] == "200" && result[1] == "Hőmérő")
+            {
+                S_Status.Text = result[1];
+            }
+            else if (result[0] == "200" && result[1] == "Páratartalom")
+            {
+                S_Status.Text = result[1];
+            }
+
+            if (result[0] == "301")
+            {
+                Temperature.Text = $"{result[1]} °C";
+            }
+            else if (result[0] == "302")
+            {
+                Humidity.Text = $"{result[1]} %";
+            }
+
+            if (result[0] == "103" && result[1] == "Hőmérő")
+            {
+                S_Status.Text = result[1];
+            }
+            else if (result[0] == "104" && result[1] == "Páratartalom")
+            {
+                S_Status.Text = result[1];
+            }
         }
     }
 }

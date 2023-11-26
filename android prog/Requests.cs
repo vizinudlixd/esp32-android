@@ -48,5 +48,54 @@ namespace Manager_app
                 }
             }
         }
+
+        public async Task<string> SendSensorRequestAsync(string endpoint, bool isSync, int sensor)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                try
+                {
+                    string url = $"http://{IP}:80/{endpoint}";
+                    HttpResponseMessage response = await client.GetAsync(url);
+
+                    string responseString = await response.Content.ReadAsStringAsync();
+                    string[] responseStringT = responseString.Split(' ');
+
+                    if (responseStringT[0] == "200" && responseStringT[1] == "TEMPON")
+                    {
+                        return $"200 Hőmérő";
+                    }
+                    else if (responseStringT[0] == "200" && responseStringT[1] == "HUMIDITYON")
+                    {
+                        return $"200 Páratartalom";
+                    }
+
+                    if (responseStringT[0] == "300" && sensor == 1)
+                    {
+                        return $"301 {responseStringT[1]}";
+                    }
+                    else if (responseStringT[0] == "300" && sensor == 0)
+                    {
+                        return $"302 {responseStringT[1]}";
+                    }
+
+                    if (responseStringT[0] == "102" && isSync && responseStringT[1] == "TEMP")
+                    {
+                        return $"103 Hőmérő";
+                    }
+                    else if (responseStringT[0] == "102" && isSync && responseStringT[1] == "HUMIDITY")
+                    {
+                        return $"104 Páratartalom";
+                    }
+
+
+                    return "";
+                }
+                catch (Exception ex)
+                {
+                    return ex.Message;
+                }
+            }
+        }
     }
 }
